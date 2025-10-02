@@ -1,0 +1,122 @@
+nav:
+  - Web5-01:
+      - web5-01/index.md
+
+###########################################################################
+
+theme:
+  name: material
+  language: fr
+  logo: _/logo-tim.svg
+  favicon: _/favicon-32x32.png
+  features:
+    - content.code.copy
+    - toc.follow
+    - navigation.top
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.prefetch
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      primary: red
+      accent: red
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Mode clair
+    - media: "(prefers-color-scheme: light)"
+      primary: red
+      accent: red
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Mode sombre
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - md_in_html
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - mdx_truly_sane_lists
+  - pymdownx.arithmatex:
+      generic: true
+
+# Google Analytics par JF
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: G-BFKT7FS4P2
+  include:
+    - robots.txt
+
+
+extra_css:
+  - https://unpkg.com/tippy.js@6/animations/shift-away.css
+  - https://unpkg.com/lightgallery@2.8.2/css/lightgallery.css
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css
+  - _/extra.css
+#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css
+
+extra_javascript:
+  - _/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/fireworks-js@2.x/dist/index.umd.js
+  - https://unpkg.com/lightgallery@2.8.2/lightgallery.min.js
+  - https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js
+  - https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
+  - _/extra.js
+  - _/image-zoom.js
+  - _/gallery.js
+  - _/tooltip.js
+
+plugins:
+  - offline
+  - tags
+  - mkdocs-video:
+      is_video: true
+      video_autoplay: true
+      video_loop: true
+      video_muted: true
+  - mkdocs-audio
+  - render-stopper:
+      tag: "[STOP]"
+
+site_name: Notes de cours
+site_url: https://tim-montmorency.com/compendium/
+copyright: Techniques d’intégration multimédia | Collège Montmorency
