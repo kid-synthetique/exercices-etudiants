@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FestiPixel - Étudiant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main id="app" class="container">
+    <header class="topbar">
+      <h1>FestiPixel – Programmation</h1>
+       <form class="controls">
+        <label>Recherche
+          <!-- ICI Input pour la recherche d'artiste -->
+
+        </label>
+        <label>Scène
+          <!-- ICI Menu déroulant pour sélectionner la scène -->
+
+        </label>
+        <label>Trier par
+          <!-- ICI  Menu déroulant pour sélectionner le critère de tri -->
+
+        </label>
+        <label>Disposition de l'interface
+          <!-- ICI Menu déroulant pour sélectionner la disposition -->
+       
+        </label>
+        <!-- Bouton de réinitialisation des éléments du formulaire -->
+        <button type="button">Réinitialiser les filtres</button>
+        
+      </form>
+      <p class="meta">0 résultat(s)</p>
+    </header>
+
+    <!-- Messages d'état -->
+    <section class="message init"><button>Charger la programmation</button></section>
+    <section class="message loading">Chargement…</section>
+    <section class="message error">Une erreur est survenue. Réessayez.</section>
+
+    <!-- Grille de cartes d'artistes -->
+    <section class="schedule grid">
+      <!-- Carte d'artiste -->
+      <article class="card">
+        <header class="card__head">
+          <h2>Nom</h2>
+          <span class="badge">Scène</span>
+        </header>
+        <p><strong>Heure:</strong> 00:00–00:00</p>
+        <p><strong>Style:</strong> Style musical</p>
+        <p aria-label="Popularité">⭐ 0</p>
+      </article>
+      <!-- Message si aucun artiste n'est visible -->
+      <p class="empty">Aucun artiste</p>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
